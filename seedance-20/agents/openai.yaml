@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance 2.0 视频 Skill"
+  short_description: "编写 2.0 提示词与汽车连续分镜"
+  default_prompt: "使用 Seedance 2.0 视频 Skill，生成版本隔离、可复制的提示词和验收清单。"

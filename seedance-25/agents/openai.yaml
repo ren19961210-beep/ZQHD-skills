@@ -1,0 +1,4 @@
+interface:
+  display_name: "Seedance 2.5 视频 Skill"
+  short_description: "编写 2.5 长叙事、延长、编辑与汽车时间轴"
+  default_prompt: "使用 Seedance 2.5 视频 Skill，先建立参考角色和时间轴，再生成可复制提示词。"
