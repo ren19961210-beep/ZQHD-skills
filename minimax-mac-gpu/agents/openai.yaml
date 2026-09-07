@@ -1,4 +1,0 @@
-interface:
-  display_name: "minimax-mac-gpu"
-  short_description: "用 Codex 调度优云 GPU 生成并安全清理 H3 视频"
-  default_prompt: "使用 $minimax-mac-gpu 完善 H3 提示词、检查云端配置、估算费用并生成视频。"

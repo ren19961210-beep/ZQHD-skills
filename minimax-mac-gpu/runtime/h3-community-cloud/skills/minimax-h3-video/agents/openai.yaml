@@ -1,4 +1,0 @@
-interface:
-  display_name: "MiniMax H3 视频"
-  short_description: "在云端 GPU 生成并下载 MiniMax H3 视频"
-  default_prompt: "使用 MiniMax H3 生成一段视频，并在完成后关闭 GPU。"
