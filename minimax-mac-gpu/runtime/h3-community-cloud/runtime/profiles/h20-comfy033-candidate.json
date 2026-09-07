@@ -1,0 +1,30 @@
+{
+  "id": "h20-comfy033-candidate",
+  "label": "H20 ComfyUI 0.33.0 候选",
+  "purpose": "formal-runtime-turbo-certification",
+  "engine": "comfyui",
+  "softwareName": "ComfyUI",
+  "workflow": "workflows/official-h3-t2v-turbo-8step-api.json",
+  "workflows": {
+    "text-to-video": "workflows/official-h3-t2v-turbo-8step-api.json",
+    "first-frame-to-video": "workflows/official-h3-t2v-turbo-8step-api.json",
+    "last-frame-to-video": "workflows/official-h3-t2v-turbo-8step-api.json",
+    "first-last-frame-to-video": "workflows/official-h3-t2v-turbo-8step-api.json",
+    "reference-image-to-video": "workflows/official-h3-reference-image-native-20step-api.json"
+  },
+  "transport": {
+    "type": "ssh-tunnel",
+    "remoteHost": "127.0.0.1",
+    "remotePort": 8188
+  },
+  "expectedImage": {
+    "id": "compshareImage-1u5sggbztpy6",
+    "type": "App"
+  },
+  "minimumSystemMemoryMb": 98304,
+  "allowedPresets": [
+    "preview",
+    "balanced",
+    "short_hq"
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "minimax-h3-turbo-8step-ref2v-native-comfyui-033-v1",
+  "schemaVersion": 1,
+  "engine": {
+    "type": "comfyui",
+    "version": "0.33.0",
+    "commit": "2f35f4a08176d993cded35dac3332be4f7287f41",
+    "repository": "https://github.com/Comfy-Org/ComfyUI"
+  },
+  "workflow": {
+    "modes": {
+      "text-to-video": "workflows/official-h3-t2v-turbo-8step-api.json",
+      "first-frame-to-video": "workflows/official-h3-t2v-turbo-8step-api.json",
+      "last-frame-to-video": "workflows/official-h3-t2v-turbo-8step-api.json",
+      "first-last-frame-to-video": "workflows/official-h3-t2v-turbo-8step-api.json",
+      "reference-image-to-video": "workflows/official-h3-reference-image-native-20step-api.json"
+    },
+    "upstreamTemplates": {
+      "textOrFirstFrame": "https://github.com/Comfy-Org/workflow_templates/blob/main/templates/video_minimax_h3_t2v.json",
+      "reference": "https://github.com/Comfy-Org/workflow_templates/blob/main/templates/video_minimax_h3_r2v.json"
+    },
+    "turboBranchEnabledFor": [
+      "text-to-video",
+      "first-frame-to-video",
+      "last-frame-to-video",
+      "first-last-frame-to-video"
+    ]
+  },
+  "acceleration": {
+    "type": "distilled-lora",
+    "steps": 8,
+    "strengthModel": 1,
+    "repository": "https://github.com/ModelTC/Minimax-H3-Turbo"
+  },
+  "models": {
+    "sources": {
+      "base": {
+        "repository": "Comfy-Org/MiniMax-H3",
+        "revision": "4cc1d817b6184899b41293954329f576cb5ae86b",
+        "license": "minimax-h3-community"
+      },
+      "turbo": {
+        "repository": "lightx2v/Minimax-h3-Turbo",
+        "revision": "05ef678438e84933c406131b59abbf86919b3aac",
+        "license": "apache-2.0"
+      }
+    },
+    "files": [
+      {
+        "source": "base",
+        "path": "diffusion_models/minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "sizeBytes": 20970379616,
+        "sha256": "e889202c41dafb67b10d67b97f0d8541508036a6090af23425a5c2615d03c47a"
+      },
+      {
+        "source": "base",
+        "path": "diffusion_models/minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+        "sizeBytes": 20970379616,
+        "sha256": "9255f52b6677845ad238f20dfaafa94727053694127ab7f255c048f0f9365779"
+      },
+      {
+        "source": "base",
+        "path": "text_encoders/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "sizeBytes": 15687142551,
+        "sha256": "35a88d51044231fe332301d7a62aa81e3f2cba62febeb446e2c1e3e0ef76f2c6"
+      },
+      {
+        "source": "base",
+        "path": "vae/minimax_h3_video_vae_fp16.safetensors",
+        "sizeBytes": 5207808496,
+        "sha256": "7c1f131492e7eddacaac9069a61b81bdd39de5cc96561e677c5eab1cdce5e522"
+      },
+      {
+        "source": "base",
+        "path": "vae/minimax_h3_audio_vae_fp32.safetensors",
+        "sizeBytes": 605254808,
+        "sha256": "8e505d95dd1561d47abd43d4238fd40d9bb1ae9e147ed0a4cba778d76ae4db48"
+      },
+      {
+        "source": "turbo",
+        "sourcePath": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+        "path": "loras/minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+        "sizeBytes": 1956193000,
+        "sha256": "2339acdf19bfe123f46b971ea35d367a84adb85de43627e1eceafa5a5b2b111e"
+      }
+    ]
+  },
+  "service": {
+    "softwareName": "ComfyUI",
+    "healthPath": "/system_stats",
+    "objectInfoPath": "/object_info"
+  },
+  "output": {
+    "container": "mp4",
+    "videoNode": "SaveVideo",
+    "requiresAudio": true
+  },
+  "allowedPresets": [
+    "preview",
+    "balanced",
+    "short_hq"
+  ],
+  "certification": {
+    "status": "pending",
+    "deploymentBinding": "compshare-official-comfyui-033-5090-64gb-turbo-candidate"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "h3-community-cloud",
+  "version": "0.2.1",
+  "description": "MiniMax H3 社区增强版：本地预览、参考素材验证、文件流式上传和任务恢复，H20 单参考视频已实测。",
+  "author": {
+    "name": "H3 社区增强版维护者"
+  },
+  "license": "MIT",
+  "keywords": [
+    "minimax-h3",
+    "comfyui",
+    "gpu"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "H3 社区增强版",
+    "shortDescription": "独立配置与可验证的参考视频生成流程",
+    "longDescription": "基于 Sac-Y 社区编排器的独立衍生版本，支持本地预览、参考视频、任务记录、恢复下载和自动关机。H20 单参考视频方块平移案例已通过；多素材复杂场景与完整 2K 尚待实机验证。非 MiniMax 官方插件。",
+    "developerName": "H3 社区增强版维护者",
+    "category": "Developer Tools",
+    "capabilities": [
+      "本地工作流预览",
+      "参考图片与视频输入（H20 单视频已实测）",
+      "首尾帧与文生视频",
+      "任务恢复与阶段耗时记录",
+      "GPU 生命周期管理"
+    ],
+    "defaultPrompt": [
+      "检查 H3 社区增强版配置和实例状态。",
+      "对我的参考视频执行本地预览，检查提示词和工作流。",
+      "查看 H3 社区增强版当前的验证边界。"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+# 私人运行状态不得提交
+.env
+.env.*
+!.env.example
+runtime-root.txt
+.DS_Store
+__pycache__/
+node_modules/
+.venv/
+outputs/
+output*/
+logs/
+*.log
+*.pem
+*.key
+*.p12
+*.mp4
+*.mov
+*.safetensors
+config.local.json
+credentials.json
+*.binding.local.json
